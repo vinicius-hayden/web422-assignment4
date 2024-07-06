@@ -49,6 +49,9 @@ export default function AdvancedSearch() {
               {...register("q", { required: true })}
               className={errors.q ? "is-invalid" : ""}
             />
+            {errors.q && (
+              <div className="invalid-feedback">Search query is required.</div>
+            )}
           </Form.Group>
         </Col>
       </Row>
@@ -94,13 +97,13 @@ export default function AdvancedSearch() {
           <Form.Check
             type="checkbox"
             label="Highlighted"
-            name="isHighlight"
             {...register("isHighlight")}
           />
+        </Col>
+        <Col>
           <Form.Check
             type="checkbox"
             label="Currently on View"
-            name="isOnView"
             {...register("isOnView")}
           />
         </Col>
