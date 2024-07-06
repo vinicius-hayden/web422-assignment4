@@ -21,7 +21,7 @@ export default function Home() {
         rounded
         alt="Metropolitan Museum of Art"
       />
-      <Row>
+      <Row className="mt-4">
         <Col md={6}>
           <p>
             The Metropolitan Museum of Art of New York City, colloquially "the
@@ -29,7 +29,7 @@ export default function Home() {
             collection contains over two million works, divided among 17
             curatorial departments. The main building at 1000 Fifth Avenue,
             along the Museum Mile on the eastern edge of Central Park on
-            Manhattan's Upper East Side, is by area one of the world's largest
+            Manhattan&apos;s Upper East Side, is by area one of the world&apos;s largest
             art museums. A much smaller second location, The Cloisters at Fort
             Tryon Park in Upper Manhattan, contains an extensive collection of
             art, architecture, and artifacts from medieval Europe.
@@ -37,7 +37,7 @@ export default function Home() {
         </Col>
         <Col md={6}>
           <p>
-            The Met's founding was in 1870 with its mission to encourage and
+            The Met&apos;s founding was in 1870 with its mission to encourage and
             develop the study of the fine arts, and the application of arts to
             manufacturing and practical life. The permanent collection consists
             of works of art from classical antiquity and ancient Egypt,
