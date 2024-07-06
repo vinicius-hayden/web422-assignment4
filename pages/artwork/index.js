@@ -34,10 +34,12 @@ export default function Artwork() {
   }, [data]);
 
   const previousPage = () => {
+    window.scrollTo(0, 0);
     if (page > 1) setPage(page - 1);
   };
 
   const nextPage = () => {
+    window.scrollTo(0, 0);
     if (page < artworkList.length) setPage(page + 1);
   };
 
@@ -47,7 +49,7 @@ export default function Artwork() {
     <>
       {artworkList.length > 0 ? (
         <>
-          <Row className="gy-4">
+          <Row className="gy-4 m-3">
             {artworkList[page - 1].map(objectID => (
               <Col lg={3} key={objectID}>
                 <ArtworkCard objectID={objectID} />

@@ -4,6 +4,11 @@ import Layout from "@/components/Layout";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
+  const data = await res.json();
+
+  if (data.message && data.message === "Not a valid object") {
+    return null;
+  }
 
   if (!res.ok) {
     const error = new Error("An error occurred while fetching the data.");
@@ -12,7 +17,7 @@ const fetcher = async (url) => {
     throw error;
   }
 
-  return res.json();
+  return data;
 };
 
 export default function App({ Component, pageProps }) {
